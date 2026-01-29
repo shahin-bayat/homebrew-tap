@@ -11,7 +11,7 @@ class Lokl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/shahin-bayat/lokl/releases/download/v0.1.1/lokl_0.1.1_darwin_amd64.tar.gz"
-      sha256 "9b3ac8630ad3bd88a86db527ed686b5fc2a126ab35e1e8c0c107cdeaea3d3da3"
+      sha256 "188c177351a5d93095d31d3c4c93345c4a52eff9cbc9df063fd97756d4e56ec4"
 
       def install
         bin.install "lokl"
@@ -19,7 +19,7 @@ class Lokl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/shahin-bayat/lokl/releases/download/v0.1.1/lokl_0.1.1_darwin_arm64.tar.gz"
-      sha256 "47755c67703eb33230110dc0cb598431ba305d2c30b955d3d8bd775c6dec4bed"
+      sha256 "442199c6f38717f1f7c228768da0ac59d648d87042678ff6962a3565d8da0292"
 
       def install
         bin.install "lokl"
@@ -30,14 +30,14 @@ class Lokl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/shahin-bayat/lokl/releases/download/v0.1.1/lokl_0.1.1_linux_amd64.tar.gz"
-      sha256 "81e4f316da9ce15b064aacfeb69615cebbe775fe2e5bb38fd0aaab551f8bede5"
+      sha256 "b5af1b89d43aa0f9a09d92c4e99648d9c6a631e31bf9e4dc1103a079017fe686"
       def install
         bin.install "lokl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/shahin-bayat/lokl/releases/download/v0.1.1/lokl_0.1.1_linux_arm64.tar.gz"
-      sha256 "7d4af1703d415449962412d613aa17cc29ab8f3c8632bd72fd84dfc98d2e216d"
+      sha256 "fa9867528a3986b82bd899623ad2121332353075d9b6687171d733601799bad7"
       def install
         bin.install "lokl"
       end
