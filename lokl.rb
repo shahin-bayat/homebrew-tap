@@ -11,24 +11,20 @@ class Lokl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/shahin-bayat/lokl/releases/download/v0.1.2/lokl_0.1.2_darwin_amd64.tar.gz"
-      sha256 "10e73b4adfcd83e86fd8285865a5ae265bf59fbab19314fdf8c6e2bdd427d121"
+      sha256 "5d440333206e1e7d62bb3234872d7750cac947e30af93a6ba93bc454d73e2246"
 
       def install
         bin.install "lokl"
-        bash_completion.install "completions/lokl.bash" => "lokl"
-        zsh_completion.install "completions/_lokl"
-        fish_completion.install "completions/lokl.fish"
+        generate_completions_from_executable(bin/"lokl", "completion")
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/shahin-bayat/lokl/releases/download/v0.1.2/lokl_0.1.2_darwin_arm64.tar.gz"
-      sha256 "1c4879c63cf78f5c682e2aa47d3c97962acf2d485e5c82d900c75ffd72f41d95"
+      sha256 "685b2efea960ada24487cb258f2e93092f70bc9052b4182e6f54d7b6a4045630"
 
       def install
         bin.install "lokl"
-        bash_completion.install "completions/lokl.bash" => "lokl"
-        zsh_completion.install "completions/_lokl"
-        fish_completion.install "completions/lokl.fish"
+        generate_completions_from_executable(bin/"lokl", "completion")
       end
     end
   end
@@ -36,22 +32,18 @@ class Lokl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/shahin-bayat/lokl/releases/download/v0.1.2/lokl_0.1.2_linux_amd64.tar.gz"
-      sha256 "9ccf7ed0fc98981c8d7bdf878335cb5a29fcc9a020ef73d48ecfbfa691256425"
+      sha256 "37a9a1857f4b768f5342dd997338a009993af269bf497b5e3c30e6237ee17876"
       def install
         bin.install "lokl"
-        bash_completion.install "completions/lokl.bash" => "lokl"
-        zsh_completion.install "completions/_lokl"
-        fish_completion.install "completions/lokl.fish"
+        generate_completions_from_executable(bin/"lokl", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/shahin-bayat/lokl/releases/download/v0.1.2/lokl_0.1.2_linux_arm64.tar.gz"
-      sha256 "4a3e8d4a9113565466f9231c2c7ad5ce28df33ac834c63db6ec358713b7e0e0c"
+      sha256 "d51b0b230435b9b26fb8bfca0c3e8e8d723a02003010f3fd3e915839024cb466"
       def install
         bin.install "lokl"
-        bash_completion.install "completions/lokl.bash" => "lokl"
-        zsh_completion.install "completions/_lokl"
-        fish_completion.install "completions/lokl.fish"
+        generate_completions_from_executable(bin/"lokl", "completion")
       end
     end
   end
