@@ -5,13 +5,13 @@
 class Lokl < Formula
   desc "Local development environment orchestrator"
   homepage "https://github.com/shahin-bayat/lokl"
-  version "0.3.1"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shahin-bayat/lokl/releases/download/v0.3.1/lokl_0.3.1_darwin_amd64.tar.gz"
-      sha256 "a0c7e913aa7b9ef36e814162f11cbb9f501fae823cec7c0e8355ca654d74016a"
+      url "https://github.com/shahin-bayat/lokl/releases/download/v0.4.0/lokl_0.4.0_darwin_amd64.tar.gz"
+      sha256 "a26f748e186f02bf3b9cd6fc894475b2eba8fe6656c7b51da7c092404a51969a"
 
       define_method(:install) do
         bin.install "lokl"
@@ -19,8 +19,8 @@ class Lokl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shahin-bayat/lokl/releases/download/v0.3.1/lokl_0.3.1_darwin_arm64.tar.gz"
-      sha256 "12d26cf3b3b2b9f4c917016ab938bf24e62437d27cb4c89ab5d6e6ef0a200538"
+      url "https://github.com/shahin-bayat/lokl/releases/download/v0.4.0/lokl_0.4.0_darwin_arm64.tar.gz"
+      sha256 "adcc8348263c63786765f597adf85466754be3e5dbedfe47dc6073157e5dee03"
 
       define_method(:install) do
         bin.install "lokl"
@@ -31,16 +31,16 @@ class Lokl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shahin-bayat/lokl/releases/download/v0.3.1/lokl_0.3.1_linux_amd64.tar.gz"
-      sha256 "5257de79a4b46f6dcdd93e6aeeb3084c0aa70eca420aeb3cfe0fd703b6550360"
+      url "https://github.com/shahin-bayat/lokl/releases/download/v0.4.0/lokl_0.4.0_linux_amd64.tar.gz"
+      sha256 "5069b15f17a2a0c2f7031918038fd9bd91b903b46ca13a5da1faa42f0a265f9d"
       define_method(:install) do
         bin.install "lokl"
         generate_completions_from_executable(bin/"lokl", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shahin-bayat/lokl/releases/download/v0.3.1/lokl_0.3.1_linux_arm64.tar.gz"
-      sha256 "7e41088ffcb54a63f5b8c1956c6b9df04a170aae4dcb6d97a2aa05165b924cd1"
+      url "https://github.com/shahin-bayat/lokl/releases/download/v0.4.0/lokl_0.4.0_linux_arm64.tar.gz"
+      sha256 "c182c78c1794c099edbf0009cc80a86d44b29289f340b9cb487e0fb07c31a446"
       define_method(:install) do
         bin.install "lokl"
         generate_completions_from_executable(bin/"lokl", "completion")
